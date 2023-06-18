@@ -1,0 +1,34 @@
+.products__secondaires-details{
+    display: flex;
+    padding: 5px;
+    .product__secondary-detail{
+        width: calc(25% - 5px);
+        margin-right: 5px;;
+        background-color: #000;
+        height: calc(100% - 5px);
+        border-radius: 5px;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: .3s;
+        transform: scale(.97);
+        cursor: pointer;
+        &:last-child{
+            margin-right: 0;
+            width: 25%;
+        }
+        img{
+            opacity: .5;
+            transform: scale(0.97);
+            &.active{
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        &:hover{
+            transform: scale(1);
+            img{
+                opacity: 1;
+            }
+        }
+    }
+}

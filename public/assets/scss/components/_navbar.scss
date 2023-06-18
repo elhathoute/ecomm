@@ -1,0 +1,596 @@
+.navbar__home{
+    //background-color: yellow;
+    
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width:600px){
+        padding:5px 10px;
+    }
+    .top-navbar{
+        display: flex;
+        div{
+            &:nth-child(1){
+                flex:2;
+                //background-color: red;
+                padding:2px;
+                display: flex;
+                align-items: center;
+                .logo-mugiwara{
+                    width: 70px;
+                    height: 40px;
+                    //background-color: red;
+                    img{
+                        width:70px;height: 100%;
+                        @media screen and (max-width:800px){width: 50px; height:30px}
+                    }
+                }
+                @media screen and (max-width:1024px){
+                    flex:2;
+                    .name-logo{font-size: 14px;}
+                }
+                @media screen and (max-width:800px){
+                    flex:9
+                    
+                }
+            }
+            &:nth-child(2){
+                flex:6;
+                padding:2px;
+                display: flex;
+                //background-color: greenyellow;
+                align-items: center;
+                @media screen and (max-width:1024px){
+                    flex:4;
+                }
+                @media screen and (max-width:830px){
+                    display: none;
+                }
+            }
+            &:nth-child(3){
+                flex:4;
+                display: flex;
+                padding: 2px;
+                //background-color: blue;
+                .icon-wishlist{
+                    //background-color: red;
+                    flex:2;
+                    display: flex;align-items: center;
+                    justify-content: center;
+                    i{
+                        //background-color: rgb(245, 249, 253);
+                        font-size: 20px;
+                        padding: 5px;
+                        border:1px solid rgb(199, 199, 199);
+
+                    }
+                    @media screen and (max-width:800px){
+                        justify-content:flex-end;
+                        flex:2;
+                        cursor: pointer;
+                        //background-color: red;
+                    }
+
+                }
+                .account{
+                    flex:2.5;
+                    //background-color: yellow;
+                    display: flex;
+                    justify-content: flex-start;
+                    display: flex;cursor: pointer;
+                    @media screen and (max-width:800px){
+                        padding: 0 10px;
+                    }
+                    
+                    .icon-header{
+                        display: flex;align-items: center;
+                        //background-color: red;
+                        justify-content: center;
+                        font-size: 24px;
+                        padding:0;
+                        
+                        @media screen and (max-width:800px){
+                            flex:10;
+                            //background-color: red;
+                            padding:5px;
+                            border:1px solid rgb(199, 199, 199);
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+                        
+                    }
+                    .sign-in{
+                        
+                        //background-color: greenyellow;
+                        flex:6;
+                        //background-color: red;
+                        display: block;
+                        
+                        span{font-size: 12px;display: block;}
+                        padding:0;
+                        @media screen and (max-width:1100px){
+                            display: none;
+                        }
+                    }
+                    @media screen and (max-width:800px){
+                        flex:2
+                    }
+                }
+                .cart-shopping{
+                    //background-color: pink;
+                    display: flex;align-items: center;cursor: pointer;
+                    @media screen and (min-width:900px){padding:0 0 0 5px}
+                    @media screen and (min-width:800px){justify-content: flex-start;}
+                    .icon-cart-shopping{flex:1;border: none;
+                        div{
+                            background-color: rgb(243, 243, 243);
+                            position: relative;display: flex;align-items: center;
+                            border-radius: 50%;
+                            justify-content: center;
+                            width: 43px;height:43px;
+                            padding: 2px;
+                            span{
+                                font-size: 9px;top:0px;right:0px;color:#fff;width:13px;height:13px;
+                                border-radius: 50%;display: flex;justify-content: center;
+                                align-items: center;
+                            }
+                            i{font-size:20px;display: flex;justify-content: center;align-items: center;}
+                        }
+                        @media screen and (max-width:800px){
+                            flex:0;
+                            padding: 5px;
+                            //border:1px solid rgb(173, 170, 170);
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content:flex-start;
+                            align-items: center;
+                        }
+                    }
+                    .cart-boxing{
+                        padding:10px 8px;
+                        
+                        display: block;font-size:19px;
+                        @media screen and (max-width:1200px){
+                            padding:10px 0px;
+                            //background-color: blue;
+                            font-size: 14px;
+                        }
+                        span{font-size: 12px;display:block;}
+                        @media screen and (max-width:800px){
+                            display: none;
+                            p{
+                                font-size: 13px;
+                                display: flex;
+                                i{
+                                    //background-color: red;
+                                    margin-bottom: 10px;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    align-items: flex-end;
+                                }
+                            }
+                        }
+                        
+                    }
+                    .box-carts{
+                        visibility: hidden;
+                        opacity: 0;
+                        
+                        transition: .3s;
+                        top:140px;
+                        @media screen and (max-width:800px){
+                            top:140px;
+                            font-size: 12px;
+                        }
+                    }
+                    .active{
+                        opacity: 1;
+                        visibility: visible;
+                        top:110px;
+                        @media screen and (max-width:800px){
+                            top:120px
+                        }
+                    }
+                    
+                    @media screen and (max-width:800px){
+                        
+                        flex:4
+                    }
+                    @media screen and (max-width:800px){
+                        //flex:2
+                    }
+                }
+                .menu-bar{
+                    display: flex;
+                    //background-color: red;
+                    align-items: center;justify-content: center;
+                    margin-left: 10px;
+                    cursor: pointer;
+                    i{
+                        
+                        //background-color: yellow;
+                        transform: scale(2.3,1.9);
+                        color:rgb(124, 123, 123);
+                    }
+                    @media screen and (min-width:801px){
+                        display: none;
+                    }
+                }
+                @media screen and (max-width:1024px){
+                    flex:6;
+                }
+                @media screen and (max-width:800px){
+                    flex:3;
+                }
+            }
+        }
+    }
+    .bottom-navbar{
+        //display: flex;
+        //background-color: red;
+        @media screen and (max-width:830px){
+            display: none;
+        }
+        .departement{
+            flex:1.3;
+            //background-color: aqua;
+            .departement-products{
+                border:1px solid rgb(232, 231, 231);
+                top:60px;
+                opacity: 0;
+                z-index: -1;
+                visibility: hidden;
+                transition: .2s ease-in-out;
+                .departement-products-categories{
+
+                    .box{
+                        opacity: .9;
+                        transform: scale(0.98);
+                        transition: .2s ease-in-out;
+                        img{transform-origin: right top;}
+                        span{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background-color: rgba(76, 73, 73, 0.5);
+                            transition: .3s;
+                            color:#fff;
+                            opacity: 1;
+                            visibility:visible;
+                            transition-delay: .4s;
+                            font-size: 14px;
+                            
+                        }
+                        &:hover{
+                            opacity: 1; 
+                            transform: scale(1);
+                            img{
+                                transition: 1.5s;
+                                transform: scale(1.1);
+                            }
+                            span{
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+            }
+            @media screen and (max-width:800px){
+                //display: none;
+            }
+            //border-right:2px solid #d4d4d8;
+            //background-color: red;
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                right:0;
+                background-color: rgb(188, 187, 187);
+                width: 2px;
+                height: 60%;
+            }
+            transition: .3s ease-in-out;
+            .icon-departement{
+                transform: scale(2);
+            }
+            .icon-arrow-dow-departement{
+                //transform: scaleX(0.6);
+                transform: scale(0.69,0.6);
+            }
+            
+            .toggle{
+                top:45px;
+                opacity: 1;
+                visibility:visible;
+                z-index: 1000;
+            }
+        }
+        .links-page{
+            flex:10;
+            li{
+                transition: .3s;
+                &:hover{
+                    transform: translateX(5px);
+                }
+            }
+            @media screen and (max-width:800px){
+                //display: none;
+            }
+            
+            
+            a{
+                color:rgb(96, 93, 93);
+                font-weight: 500;
+                transition: .3s ease-in-out;
+                &:hover{
+                    color:#ef4444;
+                }
+            }
+            li{
+                &:first-child{
+                    a{color:#ef4444}
+                }
+            }
+            //background-color: pink;
+            .list-account-nav {
+                border:1px solid rgb(242, 241, 241);
+                visibility: hidden;
+                opacity: 0;
+                transition: .2s;
+                top:50px;
+                z-index: 100000;
+                li{
+                    
+                    a{
+                        color:rgb(117, 116, 116);
+                        font-size: 15px;
+                        font-weight: normal;
+                        i{
+                            font-size: 10px;
+                            margin-left: 10px;
+                        }
+                        &:hover{
+                            color:#ef4444
+                        }
+                    
+                    }
+                
+                }
+                .links-one-secondary{
+                    .list-ul-secondary{
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: .2s;
+                        border:1px solid rgb(240, 239, 239);
+                        background-color: blue;
+                    }
+                    &:hover{
+                        .list-ul-secondary{
+                            opacity: 1;
+                            visibility: visible;
+                            left: 130px;
+                            z-index: 100000;
+                        }
+                    }
+                }
+                .links-one-secondary-2{
+                    .list-ul-secondary-2{
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: .2s;
+                        border:1px solid rgb(240, 239, 239)
+                    }
+                    &:hover{
+                        .list-ul-secondary-2{
+                            opacity: 1;
+                            visibility: visible;
+                            left: 130px;
+                        }
+                    }
+                }
+            }
+            .account-link{
+                &:hover{
+                    .list-account-nav{
+                        visibility:visible;
+                        opacity: 1;
+                        background-color: blue;
+                        top:25px;
+                        z-index: 100000;
+                    }
+                }
+            }
+        }
+    }
+    .nav-links-bottom-phono{
+        
+        
+        width:100%;
+        transform: scale(1,0);
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        transition:transform .2s;
+        transform-origin: top;
+        @media screen and (min-width:830px){
+            display: none;
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            form{
+                width: 100%;
+                input{
+                    width: 100%;
+                    padding:13px 40px;
+                    border: none;
+                    outline: none;
+                    border-radius: 5px;
+                    border:1px solid rgb(213, 212, 212);
+                    transition:.3s;
+                    &::placeholder{
+                        font-size:17px;
+                        color:rgb(213, 212, 212);
+                    }
+                    
+                }
+                .icon-search-mobile{
+                    position: absolute;
+                    font-size: 25px;
+                    color:rgb(213, 212, 212);
+                    top:50%;
+                    left: 10px;
+                    transform: translateY(-50%);
+                }
+            }
+            ul{
+                margin: 10px 2px;
+                display: flex;
+                flex-direction: column;
+                li{
+                    background-color: rgba(240, 243, 243, 0.5);
+                    padding:10px 13px;
+                    border-radius:8px;
+                    margin-bottom: 5px;
+                    display: flex;
+                    
+                    align-items: center;
+                    
+                    cursor: pointer;
+                    a{
+                        display: flex;
+                        color:rgb(134, 130, 130);
+                        transition: .3s;
+                        font-weight:500;
+                        
+                        .icon-grid{
+                            width: 25px;
+                            height: 25px;
+                            font-size: 23px;
+                            //background-color: red;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                        .icon-arrow{
+                            //background-color: green;
+                            display: flex;
+                            align-items: center;
+                            font-size: 17px;
+                            font-weight: bold;
+                        }
+                        
+                    }
+                    &:hover{
+                         a{color:#ef4444;}
+                    }
+                    &:first-child{
+                        margin-bottom: 0;
+                        margin-top: 0;
+                    }
+                }
+                ul{
+                    background-color: rgb(236, 234, 234);
+                    padding:0px;
+                    height: 0;
+                    opacity: 0;
+                    transform-origin: top;
+                    transition:height .6s;
+                    &.active{
+                        height: auto;
+                        opacity: 1;
+                    }
+                    li{
+                       
+                    }
+                }
+                
+            }
+        }
+        .account-list-mobile{
+            transform: scale(1,0);
+            visibility: hidden;
+            opacity: 0;
+            height: 0;
+            transition:transform .2s;
+            transform-origin: top;
+            background-color: rgba(240, 243, 243, 0.5);
+            
+            span{
+                //background-color: red;
+                a{
+                    font-size: 13px;
+                    font-weight: 500;
+                    transition: .3s;
+                    color:rgb(71, 71, 71);
+                    &:hover{
+                        color:#ef4444;
+                        
+                    }
+                    i{
+                        font-size: 7px;
+                        transform: rotate(90deg);
+                    }
+                }
+                .child-one-account-version-mobile, 
+                .child-two-account-version-mobile{
+                    span{
+                        a{
+                            color:rgb(103, 102, 102);
+                            font-size: 11px;
+                            &:hover{
+                                color:#ef4444;
+                            }
+                        }
+                    }
+                    transform: scale(1,0);
+                    visibility: hidden;
+                    opacity: 0;
+                    height: 0;
+                    transition:transform .2s;
+                    transform-origin: top;
+                    background-color: rgba(240, 243, 243, 0.5);
+                    
+                }
+                .expanded-child{
+                    opacity: 1;
+                    height: 100%;
+                    padding:5px;
+                    transition:transform .1s;
+                    visibility: visible;
+                    margin-bottom: 10px;
+                    margin: 6px 10px;
+                    transform: scale(1,1);
+                }
+            }
+            
+        }
+        .expanded{
+            opacity: 1;
+            height: 100%;
+            transition:transform .1s;
+            visibility: visible;
+            margin-bottom: 10px;
+            transform: scale(1,1);
+            
+        }
+        .account-link-mobile-li{
+            a{
+                &:hover{
+                    color:#ef4444;
+                }
+            }
+        }
+        
+    }
+    .show{
+        min-height:300px;
+        opacity: 1;
+        height: 100%;
+        padding: 5px;
+        transition:transform .1s;
+        visibility: visible;
+        margin-top: 5px;
+        transform: scale(1,1);
+    }
+} 
